@@ -102,6 +102,11 @@ page 50022 "Sales line- shipment date"
                     Visible = false;
                     ApplicationArea = ALL;
                 }
+                field("Remark from Factory"; rec."Remark from Factory")
+                {
+                    ApplicationArea = All;
+                }
+
             }
         }
     }

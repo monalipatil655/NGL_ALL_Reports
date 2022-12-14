@@ -147,6 +147,7 @@ page 50061 "Request For Quotes"
             {
                 Caption = 'Send For Quotation';
                 Image = SendMail;
+                ApplicationArea = All;
                 //The property 'PromotedIsBig' can only be set if the property 'Promoted' is set to 'true'
                 //PromotedIsBig = true;
 
@@ -345,6 +346,7 @@ page 50061 "Request For Quotes"
             action("Create PO.")
             {
                 Caption = 'Create PO';
+                ApplicationArea = All;
                 //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'
                 //PromotedCategory = Category4;
                 //The property 'PromotedIsBig' can only be set if the property 'Promoted' is set to 'true'
