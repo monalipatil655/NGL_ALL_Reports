@@ -24,7 +24,7 @@ pageextension 50181 Posted_Transfer_Receipt_report extends "Posted Transfer Rece
             }
             action("Inter Unit Transfer Receipt.")
             {
-
+                ApplicationArea = All;
                 trigger OnAction();
                 begin
                     //PCPL-25
@@ -45,10 +45,12 @@ pageextension 50181 Posted_Transfer_Receipt_report extends "Posted Transfer Rece
                 Caption = 'Inter Unit Transfer Receipt';
                 Promoted = true;
                 PromotedCategory = Process;
+                ApplicationArea = All;
             }
             action("Approved/Test Label")
             {
                 Caption = 'Approved/Test Label';
+                ApplicationArea = All;
 
                 trigger OnAction();
                 begin
@@ -66,6 +68,7 @@ pageextension 50181 Posted_Transfer_Receipt_report extends "Posted Transfer Rece
             action("Transfer Status Label")
             {
                 Caption = 'Transfer Status Label';
+                ApplicationArea = All;
 
                 trigger OnAction();
                 begin

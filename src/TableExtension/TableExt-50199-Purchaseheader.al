@@ -151,11 +151,13 @@ tableextension 50199 Purchase_Header_report extends "Purchase Header"
                                         CLEAR(Purchase_OrderFA_T);
                                         */
 
+                                        /*
                                         Recref.GetTable(recVend);
                                         TempBlob.CreateOutStream(OutStr);
                                         Report.SaveAs(Report::"Purchase_Order - FA_T", '', ReportFormat::Pdf, OutStr, Recref);
                                         TempBlob.CreateInStream(InStr);
                                         Emailmessage.AddAttachment('Purchase_Order - FA_T', '.pdf', InStr);
+                                        */
                                         //SMTP.AddAttachment('C:\Purchase_Order' + '.pdf', '');
                                         //SMTP.Send;
                                         //MESSAGE('Successful');
@@ -172,12 +174,12 @@ tableextension 50199 Purchase_Header_report extends "Purchase Header"
                                     END;
                             END;
                             //PCPL-0025
-                            NewReceipt.Add('purchase@nglfinechem.com,project@nglfinechem.com');   //PCPL/NSW/MIG 11July22 New Code added 
-                                                                                                  // SMTP.AddCC(NewReceipt); //PCPL/NSW/MIG 11July22 New Code added 
+                            //NewReceipt.Add('purchase@nglfinechem.com;project@nglfinechem.com');   //PCPL/NSW/MIG 11July22 New Code added 
+                            // SMTP.AddCC(NewReceipt); //PCPL/NSW/MIG 11July22 New Code added 
 
                             //SMTP.Send;
                             Emailmessage.Create(VarRecipaint, Varsubject, Format(BodyText), true, UserReceipt, NewReceipt);
-                            Email.Send(Emailmessage, Enum::"Email Scenario"::Default);
+                            //Email.Send(Emailmessage, Enum::"Email Scenario"::Default);
                         END;
                     END;
                 END
@@ -188,6 +190,7 @@ tableextension 50199 Purchase_Header_report extends "Purchase Header"
             END;
         END;//pcpl0024_10Dec2018
     end;
+
 
     var
         NewReceipt: List of [Text];//PCPL/NSW/MIG 

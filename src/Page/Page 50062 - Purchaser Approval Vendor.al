@@ -4,6 +4,8 @@ page 50062 "Purchaser Approval Vendor"
     InsertAllowed = false;
     PageType = List;
     SourceTable = 50033;
+    ApplicationArea = all;
+    UsageCategory = Lists;
 
     layout
     {

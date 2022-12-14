@@ -5,17 +5,25 @@ pageextension 50183 Bank_Payment_Voucher_Report extends "Bank Payment Voucher"
     layout
     {
 
-
-
-
     }
     actions
     {
-
-
-
         addafter("Print Check")
         {
+            action("<Action50>")
+            {
+                Image = "PrintCheck";
+                Caption = 'Check printing';
+                ApplicationArea = ALl;
+
+                trigger OnAction();
+                begin
+                    GenJournalLine.RESET;
+                    GenJournalLine.SETRANGE("Document No.", Rec."Document No.");
+                    IF GenJournalLine.FINDFIRST THEN
+                        REPORT.RUNMODAL(50011, TRUE, FALSE, GenJournalLine);
+                end;
+            }
             action("Purchase Order- FA")
             {
                 Caption = 'PO-FA';
@@ -35,8 +43,10 @@ pageextension 50183 Bank_Payment_Voucher_Report extends "Bank Payment Voucher"
                 ApplicationArea = all;
             }
         }
-
-
+        modify(Preview)
+        {
+            Visible = true;
+        }
     }
 
 

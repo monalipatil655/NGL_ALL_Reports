@@ -8,8 +8,8 @@ report 50038 "Over Due Mail"
     {
         dataitem(Customer; Customer)
         {
-            // DataItemTableView = WHERE("VAT Exempted" = FILTER(false)); //PCPL/NSW/MIG  03Aug22
-
+            //DataItemTableView = WHERE("VAT Exempted" = FILTER(false)); //PCPL/NSW/MIG  03Aug22
+            DataItemTableView = where("No Payment Remainder" = FILTER(false));
             trigger OnAfterGetRecord();
             begin
                 recSaleSetup.GET;

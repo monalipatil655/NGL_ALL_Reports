@@ -221,7 +221,7 @@ report 50034 "Approved Status Label"
         Approved: Boolean;
         Test: Boolean;
 
-    local procedure CreateQRCodeInput(Name: Text[80]; No: Text[80]; Postdate: Text[80]; ExtNo: Code[80]; LotNo: Code[80]; totQty: Decimal; ContQty: Code[80]) QRCodeInput: Text[1024];
+    /*local procedure CreateQRCodeInput(Name: Text[80]; No: Text[80]; Postdate: Text[80]; ExtNo: Code[80]; LotNo: Code[80]; totQty: Decimal; ContQty: Code[80]) QRCodeInput: Text[1024];
     var
         IBarCodeProvider: DotNet BarcOdeProvider;
     begin
@@ -237,25 +237,26 @@ report 50034 "Approved Status Label"
         QRCodeFileName := IBarCodeProvider.GetBarcode(QRCodeInput);
     end;
 
-    local procedure GetBarCodeProvider(IBarCodeProvider: DotNet QRProvider/*"'Microsoft.Dynamics.Nav.MX, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'.Microsoft.Dynamics.Nav.MX.BarcodeProviders.IBarcodeProvider"*/);
-    var
-        QRCodeProvider: DotNet QRProvider;//"'Microsoft.Dynamics.Nav.MX, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'.Microsoft.Dynamics.Nav.MX.BarcodeProviders.QRCodeProvider" RUNONCLIENT;
-    begin
-        QRCodeProvider := QRCodeProvider.QRCodeProvider;
-        IBarCodeProvider := QRCodeProvider;
-    end;
+    local procedure GetBarCodeProvider(IBarCodeProvider: DotNet QRProvider/*"'Microsoft.Dynamics.Nav.MX, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'.Microsoft.Dynamics.Nav.MX.BarcodeProviders.IBarcodeProvider"*///);
+    //var
+    //QRCodeProvider: DotNet QRProvider;//"'Microsoft.Dynamics.Nav.MX, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'.Microsoft.Dynamics.Nav.MX.BarcodeProviders.QRCodeProvider" RUNONCLIENT;
+    //begin
+    //QRCodeProvider := QRCodeProvider.QRCodeProvider;
+    //IBarCodeProvider := QRCodeProvider;
+    //end;
 
-    local procedure MoveToMagicPath(SourceFileName: Text[1024]) DestinationFileName: Text[1024];
-    var
+    //local procedure MoveToMagicPath(SourceFileName: Text[1024]) DestinationFileName: Text[1024];
+    //var
     // FileSystemObject: Automation "{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B} 1.0:{0D43FE01-F093-11CF-8940-00A0C9054228}:'Windows Script Host Object Model'.FileSystemObject";
-    begin
-        //DestinationFileName := ThreeTierMgt.ClientTempFileName('');  
+    //begin
+    //DestinationFileName := ThreeTierMgt.ClientTempFileName('');  
 
-        //IF ISCLEAR(FileSystemObject) THEN
-        //  CREATE(FileSystemObject, TRUE, TRUE);
+    //IF ISCLEAR(FileSystemObject) THEN
+    //  CREATE(FileSystemObject, TRUE, TRUE);
 
 
-        //FileSystemObject.MoveFile(SourceFileName, DestinationFileName);
-    end;
+    //FileSystemObject.MoveFile(SourceFileName, DestinationFileName);
+    //end;
 }
+
 

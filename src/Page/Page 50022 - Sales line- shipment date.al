@@ -6,6 +6,8 @@ page 50022 "Sales line- shipment date"
     SourceTableView = SORTING("Document Type", "Document No.", "Line No.")
                       ORDER(Descending)
                       WHERE("Document Type" = FILTER(Order));
+    ApplicationArea = all;
+    UsageCategory = Lists;
 
     layout
     {

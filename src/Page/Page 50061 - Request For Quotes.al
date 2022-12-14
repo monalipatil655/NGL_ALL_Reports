@@ -4,6 +4,8 @@ page 50061 "Request For Quotes"
 
     PageType = List;
     SourceTable = 50003;
+    ApplicationArea = all;
+    UsageCategory = Lists;
 
     layout
     {

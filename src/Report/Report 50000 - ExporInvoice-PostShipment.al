@@ -5,6 +5,8 @@ report 50000 "ExporInvoice-PostShipment"
     CaptionML = ENU = 'Sales - Invoice',
                 ENN = 'Sales - Invoice';
     Permissions = TableData 7190 = rimd;
+    ApplicationArea = All;
+    UsageCategory = ReportsAndAnalysis;
 
     dataset
     {

@@ -3,6 +3,8 @@ report 50032 "Customer Account mail"
     // version KAR 1.0
 
     ProcessingOnly = true;
+    ApplicationArea = All;
+    UsageCategory = ReportsAndAnalysis;
 
     dataset
     {

@@ -4,6 +4,8 @@ page 50070 "Indent Sent To Vendors List"
     PageType = List;
     Permissions = TableData 50032 = rm;
     SourceTable = 50032;
+    ApplicationArea = all;
+    UsageCategory = Lists;
 
     layout
     {

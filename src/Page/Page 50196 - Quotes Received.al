@@ -6,6 +6,8 @@ page 50196 "Quotes Received"
     Permissions =;
     SourceTable = 50032;
     SourceTableView = WHERE("PO Created" = FILTER(False));
+    ApplicationArea = all;
+    UsageCategory = Lists;
 
     layout
     {

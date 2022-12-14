@@ -14,7 +14,7 @@ pageextension 50179 Item_Reclass_journal extends "Item Reclass. Journal"
             action("Material issue- F-11")
             {
                 Caption = 'Material issue- F-11';
-                //RunObject = Report 50086; //NSW07
+                RunObject = Report 50086; //NSW07
                 ApplicationArea = all;
             }
         }

@@ -5,14 +5,16 @@ page 50082 "Closed Purchase Order List"
     // GITLExim   001   Changes done in SourceTableView property.
     Extensible = true;
 
-    CaptionML = ENU = 'Purchase Orders',
-                ENN = 'Purchase Orders';
+    CaptionML = ENU = 'Closed Purchase Order List',
+                ENN = 'Closed Purchase Order List';
     CardPageID = "Purchase Order";
     Editable = false;
     PageType = List;
     SourceTable = 38;
     SourceTableView = WHERE("Closed PO" = CONST(True),
                             "Document Type" = CONST(Order));
+    ApplicationArea = all;
+    UsageCategory = Lists;
 
     layout
     {

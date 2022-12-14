@@ -4,6 +4,8 @@ report 50016 "Customer Confirmation Account"
 
     DefaultLayout = RDLC;
     RDLCLayout = 'src\Report Layout\Customer Confirmation Account.rdl';
+    ApplicationArea = All;
+    UsageCategory = ReportsAndAnalysis;
 
     dataset
     {

@@ -4,7 +4,8 @@ report 50001 "NGL - Sales Quotes"
 
     DefaultLayout = RDLC;
     RDLCLayout = 'src\Report Layout\NGL - Sales Quotes.rdl';
-
+    ApplicationArea = All;
+    UsageCategory = ReportsAndAnalysis;
     dataset
     {
         dataitem("Sales Header"; "Sales Header")

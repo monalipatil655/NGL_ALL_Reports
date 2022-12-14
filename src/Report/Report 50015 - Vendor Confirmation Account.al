@@ -4,7 +4,8 @@ report 50015 "Vendor Confirmation Account"
 
     DefaultLayout = RDLC;
     RDLCLayout = 'src\Report Layout\Vendor Confirmation Account.rdl';
-
+    ApplicationArea = All;
+    UsageCategory = ReportsAndAnalysis;
     dataset
     {
         dataitem(Vendor; Vendor)

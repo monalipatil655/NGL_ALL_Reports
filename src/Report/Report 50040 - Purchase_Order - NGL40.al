@@ -8,7 +8,8 @@ report 50040 "Purchase_Order - NGL40"
     // Prepared By: Gunjan Mittal
     DefaultLayout = RDLC;
     RDLCLayout = 'src\Report Layout\Purchase_Order - NGL40.rdl';
-
+    ApplicationArea = all;
+    UsageCategory = ReportsAndAnalysis;
 
     dataset
     {

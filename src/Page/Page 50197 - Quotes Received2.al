@@ -4,6 +4,8 @@ page 50197 "Quotes Received2"
 
     PageType = List;
     SourceTable = 50032;
+    ApplicationArea = all;
+    UsageCategory = Lists;
 
     layout
     {

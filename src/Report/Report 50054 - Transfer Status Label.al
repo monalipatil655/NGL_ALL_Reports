@@ -206,11 +206,11 @@ report 50054 "Transfer Status Label"
                 CLEAR(QRCodeInput);
                 //IF ThreeTierMgt.ClientFileExists(QRCodeFileName) THEN//PCPL/NSW/07  04Nov22
                 //  ThreeTierMgt.DeleteClientFile(QRCodeFileName);//PCPL/NSW/07  04Nov22
-
+                /*
                 QRCodeInput := CreateQRCodeInput("Transfer Receipt Line".Description, "Transfer Receipt Line"."Item No.", PostingDate, ExtNo1, LotNo1, Qty1, ContainerQty);
                 QRCodeFileName := GetQRCode(QRCodeInput);
                 QRCodeFileName := MoveToMagicPath(QRCodeFileName);
-
+                */
                 CLEAR(TempBlob1);
                 ThreeTierMgt.BLOBImport(TempBlob1, QRCodeFileName);
                 IF TempBlob1.HASVALUE THEN BEGIN
@@ -383,9 +383,10 @@ report 50054 "Transfer Status Label"
         RecPurchRcptHeader: Record "Purch. Rcpt. Header";
         SupplierName: Text;
 
+    /*
     local procedure CreateQRCodeInput(Name: Text[80]; No: Text[80]; Postdate: Text[80]; ExtNo: Code[80]; LotNo: Code[80]; totQty: Decimal; ContQty: Code[80]) QRCodeInput: Text[1024];
     var
-        IBarCodeProvider: DotNet BarcOdeProvider;//"'Microsoft.Dynamics.Nav.MX, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'.Microsoft.Dynamics.Nav.MX.BarcodeProviders.IBarcodeProvider";
+        //IBarCodeProvider: DotNet BarcOdeProvider;//"'Microsoft.Dynamics.Nav.MX, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'.Microsoft.Dynamics.Nav.MX.BarcodeProviders.IBarcodeProvider";
     begin
         //QRCodeInput := 'Material Name:' + Name + ';' + 'GRN NO.'+ No +';' + 'GRN Date'+ Postdate + ';' + 'Lot no.' + ExtNo + '/'+ 'Batch No.' + LotNo + ';' + 'Total Qty.' +FORMAT(totQty)+';' + 'Container Qty.'+ContQty+';';
         QRCodeInput := 'Item:' + Name + ';' + No + ';' + Postdate + ';' + ExtNo + '/' + LotNo + ';' + FORMAT(totQty) + ';' + ContQty + ';';
@@ -393,19 +394,21 @@ report 50054 "Transfer Status Label"
 
     local procedure GetQRCode(QRCodeInput: Text[1024]) QRCodeFileName: Text[1024];
     var
-        IBarCodeProvider: DotNet BarcOdeProvider;//"'Microsoft.Dynamics.Nav.MX, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'.Microsoft.Dynamics.Nav.MX.BarcodeProviders.IBarcodeProvider" RUNONCLIENT;
+       IBarCodeProvider: DotNet BarcOdeProvider;//"'Microsoft.Dynamics.Nav.MX, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'.Microsoft.Dynamics.Nav.MX.BarcodeProviders.IBarcodeProvider" RUNONCLIENT;
     begin
         GetBarCodeProvider(IBarCodeProvider);
         QRCodeFileName := IBarCodeProvider.GetBarcode(QRCodeInput);
     end;
 
-    local procedure GetBarCodeProvider(IBarCodeProvider: DotNet BarcOdeProvider/*"'Microsoft.Dynamics.Nav.MX, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'.Microsoft.Dynamics.Nav.MX.BarcodeProviders.IBarcodeProvider"*/);
+    local procedure GetBarCodeProvider(IBarCodeProvider: DotNet BarcOdeProvider/*"'Microsoft.Dynamics.Nav.MX, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'.Microsoft.Dynamics.Nav.MX.BarcodeProviders.IBarcodeProvider"*///);
+    /*
     var
         QRCodeProvider: DotNet QRProvider;//"'Microsoft.Dynamics.Nav.MX, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'.Microsoft.Dynamics.Nav.MX.BarcodeProviders.QRCodeProvider" RUNONCLIENT;
     begin
         QRCodeProvider := QRCodeProvider.QRCodeProvider;
         IBarCodeProvider := QRCodeProvider;
     end;
+    */
 
     local procedure MoveToMagicPath(SourceFileName: Text[1024]) DestinationFileName: Text[1024];
     var

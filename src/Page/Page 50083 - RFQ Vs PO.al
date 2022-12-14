@@ -3,6 +3,8 @@ page 50083 "RFQ Vs PO"
     PageType = List;
     Permissions = TableData 50032 = rimd;
     SourceTable = 50032;
+    ApplicationArea = all;
+    UsageCategory = Lists;
 
     layout
     {

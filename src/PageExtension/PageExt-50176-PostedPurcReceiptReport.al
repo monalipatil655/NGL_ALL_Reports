@@ -42,6 +42,7 @@ pageextension 50176 Posted_Purcase_Receipt_report extends "Posted Purchase Recei
             action("<Action50>")
             {
                 Caption = 'GRN- Engineering';
+                ApplicationArea = All;
 
                 trigger OnAction();
                 begin
@@ -71,7 +72,7 @@ pageextension 50176 Posted_Purcase_Receipt_report extends "Posted Purchase Recei
             action("Status Label")
             {
                 Caption = 'Status Label';
-
+                ApplicationArea = All;
                 trigger OnAction();
                 begin
                     /*PurchRcptHeader.RESET;
@@ -94,7 +95,7 @@ pageextension 50176 Posted_Purcase_Receipt_report extends "Posted Purchase Recei
             action("Approved/Test Label")
             {
                 Caption = 'Approved/Test Label';
-
+                ApplicationArea = All;
                 trigger OnAction();
                 begin
                     PurchRcptHeader.RESET;
