@@ -82,9 +82,14 @@ report 50086 "Material issue-F-11"
                 RecInspectionDataSheet.SETFILTER("Certificate No.", '<>%1', '');  //PCPL_YSR
                 IF RecInspectionDataSheet.FINDLAST
                   THEN
-                    Certificate_No := RecInspectionDataSheet."Certificate No.";
-
-
+                    Certificate_No := RecInspectionDataSheet."Certificate No."
+                ELSE BEGIN
+                    RecInspectionDataSheet.RESET;
+                    RecInspectionDataSheet.SETRANGE(RecInspectionDataSheet."Item No.", "Item No.");
+                    RecInspectionDataSheet.SETRANGE(RecInspectionDataSheet."Lot No.", "Lot No.");
+                    IF RecInspectionDataSheet.FINDLAST THEN
+                        Certificate_No := RecInspectionDataSheet."Certificate No."
+                END;
 
                 IF "Warehouse Entry".Quantity < 0 THEN BEGIN
                     OldBinCode := "Warehouse Entry"."Bin Code";
