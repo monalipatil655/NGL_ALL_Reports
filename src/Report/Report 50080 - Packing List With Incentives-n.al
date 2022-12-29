@@ -11,7 +11,7 @@
 //         dataitem(Integer; Integer)
 //         {
 //             DataItemTableView = SORTING(Number);
-//             dataitem(DataItem8078; Table33001046)
+//             dataitem(DataItem8078; )
 //             {
 //                 DataItemTableView = SORTING(No.);
 //                 RequestFilterFields = "No.";
