@@ -79,6 +79,12 @@
     "version": "1.0.0.2"
     },
     {
+      "appId": "176e56f1-ba47-48d4-9bf9-69065966c999",
+    "name": "Exim_Extension",
+    "publisher": "Pacific",
+    "version": "1.0.0.3"
+    },
+    {
       "appId": "91ad44b7-a318-40bd-b41f-f70afd019a5d",
     "name": "E-Invoice & E-Way",
     "publisher": "Pacific",
@@ -90,6 +96,7 @@
     "publisher": "Pacific",
     "version": "1.0.0.1"
     }
+    
   ],
   "screenshots": [],
   "platform": "1.0.0.0",
