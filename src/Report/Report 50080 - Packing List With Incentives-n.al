@@ -489,6 +489,7 @@ report 50080 "Packing List With Incentives-n"
                          */
 
                         //CountPack:="Packing List Package Details".COUNT;
+                        Message('hello');
                         CountPack += 1;
                         LotNo := "Lot Number";
                         ExpiryDate := "Expiry Date";
@@ -534,30 +535,28 @@ report 50080 "Packing List With Incentives-n"
                             IF TariffNo.FINDFIRST THEN
                                 TarriffCode := TariffNo.Description;
 
-
-
                             //IF "Packing List Header".Status<>"Packing List Header".Status::Shipped THEN
                             //BEGIN
                             //END;
                         END;
 
-                        //IF "Packing List Package Details"."Line No."=10000 THEN BEGIN
-                        //itemdescprodgrouptex:= ProductGroup.Description+"Packing List Package Details"."Item Description";
-                        IF Itemrec.GET("Item No.") THEN
-                            // IF ProductGroup.GET(Itemrec."Item Category Code", Itemrec."Product Group Code") THEN  //PCPL-25/030123
-                            IF ItemNo <> "Item No." THEN BEGIN
-                                ItemNo := "Item No.";
-                                //itemdescprodgrouptex := ProductGroup.Description; //PCPL-25/030123
-                                ItemDescr := "Item Description" + Descr2;
-                            END
+                        IF "Line No." = 10000 THEN BEGIN
+                            //itemdescprodgrouptex:= ProductGroup.Description+"Packing List Package Details"."Item Description";
+                            IF Itemrec.GET("Item No.") THEN
+                                // IF ProductGroup.GET(Itemrec."Item Category Code", Itemrec."Product Group Code") THEN  //PCPL-25/030123
+                                IF ItemNo <> "Item No." THEN BEGIN
+                                    ItemNo := "Item No.";
+                                    //itemdescprodgrouptex := ProductGroup.Description; //PCPL-25/030123
+                                    ItemDescr := "Item Description" + Descr2;
+                                END
 
                             // itemdescprodgrouptex := ProductGroup.Description;
                             //ItemDescr := "Packing List Package Details"."Item Description" + Descr2;
-                            //END
-                            ELSE BEGIN
-                                itemdescprodgrouptex := '';
-                                ItemDescr := '';
-                            END;
+                        END
+                        ELSE BEGIN
+                            itemdescprodgrouptex := '';
+                            ItemDescr := '';
+                        END;
                         /*
                        IF ItemNo <> "Item No." THEN BEGIN
                          ItemNo := "Item No.";

@@ -7198,24 +7198,6 @@ End Function
         <Field Name="FixedLay">
           <DataField>FixedLay</DataField>
         </Field>
-        <Field Name="Extended_Text_Line__Extended_Text_Line__Text">
-          <DataField>Extended_Text_Line__Extended_Text_Line__Text</DataField>
-        </Field>
-        <Field Name="Extended_Text_Line_Table_Name">
-          <DataField>Extended_Text_Line_Table_Name</DataField>
-        </Field>
-        <Field Name="Extended_Text_Line_No_">
-          <DataField>Extended_Text_Line_No_</DataField>
-        </Field>
-        <Field Name="Extended_Text_Line_Language_Code">
-          <DataField>Extended_Text_Line_Language_Code</DataField>
-        </Field>
-        <Field Name="Extended_Text_Line_Text_No_">
-          <DataField>Extended_Text_Line_Text_No_</DataField>
-        </Field>
-        <Field Name="Extended_Text_Line_Line_No_">
-          <DataField>Extended_Text_Line_Line_No_</DataField>
-        </Field>
       </Fields>
       <Query>
         <DataSourceName>DataSource</DataSourceName>
